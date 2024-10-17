@@ -1,0 +1,37 @@
+﻿@using DoAnChuyenNganh.Utilities
+@model IList<Menu>
+
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	<div class="container">
+		<a class="navbar-brand" href="/Home">Vacation<span>Travel Agency</span></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="oi oi-menu"></span> Menu
+		</button>
+
+		<div class="collapse navbar-collapse" id="ftco-nav">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item"><a href="/Home" class="nav-link text-danger">Trang chủ</a></li>
+				@foreach (var menu in Model.Where(m=>m.Levels == 1).OrderBy(n=>n.MenuOrder))
+				{
+					var Pid = menu.MenuID;
+					string url = Functions.TitleSlugGeneration("list", menu.MenuName, menu.MenuID);
+					if( !string.IsNullOrEmpty(menu.Link))
+					{
+						url = menu.Link;
+					}
+
+					var Smenu = Model.Where(p => p.ParentID == Pid).OrderBy(p => p.MenuOrder).ToList();
+
+					<li class="nav-item"><a href="/@url" class="nav-link text-danger" >@menu.MenuName</a></li>
+
+				}
+				<div class="nav-item cta dropdown m-0"><a href="/HomeRegister" class="nav-link">@Functions._UserName</a>
+					<div class="dropdown-menu m-0">
+						<a class="dropdown-item text-black-50" href="/HomeLogin">Đăng xuất</a>
+					</div>
+				</div>
+			</ul>
+		</div>
+	</div>
+</nav>
+<!-- END nav -->

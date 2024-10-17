@@ -1,0 +1,80 @@
+﻿@model DoAnChuyenNganh.Models.Post
+
+@{
+    ViewData["Title"] = "EditPost";
+}
+<div class="container-fluid">
+    <h1>Chỉnh sửa bài viết</h1>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="EditPost">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="PostID" />
+                <div class="form-group">
+                    <label asp-for="Title" class="control-label"></label>
+                    <input asp-for="Title" class="form-control" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Abstract" class="control-label"></label>
+                    <input asp-for="Abstract" class="form-control" />
+                    <span asp-validation-for="Abstract" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Contents" class="control-label"></label>
+                    <input asp-for="Contents" class="form-control" />
+                    <span asp-validation-for="Contents" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Images" class="control-label"></label>
+                    <input asp-for="Images" class="form-control" />
+                    <span asp-validation-for="Images" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Author" class="control-label"></label>
+                    <input asp-for="Author" class="form-control" />
+                    <span asp-validation-for="Author" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CreatedDate" class="control-label"></label>
+                    <input asp-for="CreatedDate" class="form-control" />
+                    <span asp-validation-for="CreatedDate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="IsActive" class="control-label"></label>
+                    <input asp-for="IsActive" class="form-control" />
+                    <span asp-validation-for="IsActive" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PostOrder" class="control-label"></label>
+                    <input asp-for="PostOrder" class="form-control" />
+                    <span asp-validation-for="PostOrder" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MenuID" class="control-label"></label>
+                    <input asp-for="MenuID" class="form-control" />
+                    <span asp-validation-for="MenuID" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Category" class="control-label"></label>
+                    <input asp-for="Category" class="form-control" />
+                    <span asp-validation-for="Category" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Status" class="control-label"></label>
+                    <input asp-for="Status" class="form-control" />
+                    <span asp-validation-for="Status" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <button type="submit" value="EditPost" class="btn btn-primary">
+                    <i class="fa fa-check"></i>Xác nhận
+                    </button>
+                    <a asp-action="Post" class="btn btn-lg btn-warning mr-5"><i class="fa fa-arrow-left"></i> Quay lại</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+

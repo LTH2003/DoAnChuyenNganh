@@ -1,0 +1,73 @@
+﻿@model DoAnChuyenNganh.Models.SanPham
+
+@{
+    ViewData["Title"] = "DeleteSP";
+}
+<div class="container-fluid">
+    <h1>Xóa Sản phẩm</h1>
+
+    <h3>Xác nhận xóa sản phẩm?</h3>
+    <div>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.TenTour)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.TenTour)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.AnhTour)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.AnhTour)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.TimeTour)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.TimeTour)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.DiaDiem)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.DiaDiem)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.PhongTam)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.PhongTam)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.PhongNgu)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.PhongNgu)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.KhuVuc)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.KhuVuc)
+            </dd>
+        </dl>
+
+        <form asp-action="DeleteSP" method="post">
+            <input type="hidden" asp-for="MaTour" />
+            <a class="btn btn-lg btn-warning p-2 mr-5" href="javascript:history.back()">
+                <i class="fa fa-arrow-alt-circle-left"></i> Quay lại
+            </a>
+            <button type="submit" value="Delete" class="btn btn-danger" />
+            <i class="fa fa-trash"></i> Xóa Tour
+            </button>
+        </form>
+    </div>
+</div>

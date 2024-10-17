@@ -1,0 +1,73 @@
+﻿@model DoAnChuyenNganh.Models.SanPham
+
+@{
+    ViewData["Title"] = "CreateSP";
+}
+<div class="container-fluid">
+    <h1>Thêm mới Sản phẩm</h1>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="CreateSP">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="TenTour" class="control-label"></label>
+                    <input asp-for="TenTour" class="form-control" />
+                    <span asp-validation-for="TenTour" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AnhTour" class="control-label"></label>
+                    <input asp-for="AnhTour" class="form-control" />
+                    <span asp-validation-for="AnhTour" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Price" class="control-label"></label>
+                    <input asp-for="Price" class="form-control" />
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MaMTSP" class="control-label"></label>
+                    <input asp-for="MaMTSP" class="form-control" />
+                    <span asp-validation-for="MaMTSP" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MaLoai" class="control-label"></label>
+                    <input asp-for="MaLoai" class="form-control" />
+                    <span asp-validation-for="MaLoai" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TimeTour" class="control-label"></label>
+                    <input asp-for="TimeTour" class="form-control" />
+                    <span asp-validation-for="TimeTour" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DiaDiem" class="control-label"></label>
+                    <input asp-for="DiaDiem" class="form-control" />
+                    <span asp-validation-for="DiaDiem" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PhongTam" class="control-label"></label>
+                    <input asp-for="PhongTam" class="form-control" />
+                    <span asp-validation-for="PhongTam" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PhongNgu" class="control-label"></label>
+                    <input asp-for="PhongNgu" class="form-control" />
+                    <span asp-validation-for="PhongNgu" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="KhuVuc" class="control-label"></label>
+                    <input asp-for="KhuVuc" class="form-control" />
+                    <span asp-validation-for="KhuVuc" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <button type="submit" value="CreateSP" class="btn btn-primary">
+                    <i class="fa fa-check"></i> Xác nhận
+                    </button>
+                    <a asp-action="SanPham" class="btn btn-lg btn-warning mr-5"><i class="fa fa-arrow-alt-circle-left"></i> Quay lại</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
